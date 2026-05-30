@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DEFENDUDE.csproj" />
+  <Project Path="src/DEFENDUDE.Application/DEFENDUDE.Application.csproj" />
+  <Project Path="src/DEFENDUDE.Domain/DEFENDUDE.Domain.csproj" />
+  <Project Path="src/DEFENDUDE.Infrastructure/DEFENDUDE.Infrastructure.csproj" />
+</Solution>

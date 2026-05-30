@@ -1,0 +1,367 @@
+{
+  "file": "defense_inventory_panel.png",
+  "display_name": "Defense inventory panel",
+  "canvas": {
+    "width": 619,
+    "height": 1383
+  },
+  "coordinate_system": {
+    "origin": "top-left",
+    "x_axis": "increases to the right",
+    "y_axis": "increases downward",
+    "units": "pixels"
+  },
+  "rendering": {
+    "background": "transparent",
+    "recommended_scale_filter": "nearest",
+    "integer_scaling_preferred": true
+  },
+  "purpose": "Single-column inventory panel for defenses: 3 fences, 4 turrets, and 1 mine.",
+  "layout_summary": {
+    "columns": 1,
+    "rows": 8,
+    "content_box_count": 8,
+    "count_box_count": 8,
+    "slot_order": "top_to_bottom"
+  },
+  "recommended_default_order": [
+    "fence_wood",
+    "fence_metal",
+    "fence_electric",
+    "turret_single_shot",
+    "turret_rapid_fire",
+    "turret_sniper",
+    "turret_flamethrower",
+    "mine_standard"
+  ],
+  "regions": {
+    "panel_outer_bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 619,
+      "height": 1383,
+      "x2": 618,
+      "y2": 1382
+    },
+    "item_rows": [
+      {
+        "id": 1,
+        "intended_item": "fence_wood",
+        "label": "Wood fence",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 44,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 207
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 69,
+          "width": 296,
+          "height": 118,
+          "x2": 399,
+          "y2": 186
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 43,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 188
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 96,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 171
+        }
+      },
+      {
+        "id": 2,
+        "intended_item": "fence_metal",
+        "label": "Metal fence",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 198,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 361
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 223,
+          "width": 296,
+          "height": 118,
+          "x2": 399,
+          "y2": 340
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 197,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 342
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 250,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 325
+        }
+      },
+      {
+        "id": 3,
+        "intended_item": "fence_electric",
+        "label": "Electric fence",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 352,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 515
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 377,
+          "width": 296,
+          "height": 119,
+          "x2": 399,
+          "y2": 495
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 351,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 496
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 405,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 480
+        }
+      },
+      {
+        "id": 4,
+        "intended_item": "turret_single_shot",
+        "label": "Single-shot turret",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 507,
+          "width": 338,
+          "height": 163,
+          "x2": 409,
+          "y2": 669
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 532,
+          "width": 296,
+          "height": 119,
+          "x2": 399,
+          "y2": 650
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 506,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 651
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 559,
+          "width": 83,
+          "height": 77,
+          "x2": 513,
+          "y2": 635
+        }
+      },
+      {
+        "id": 5,
+        "intended_item": "turret_rapid_fire",
+        "label": "Rapid-fire turret",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 661,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 824
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 686,
+          "width": 296,
+          "height": 119,
+          "x2": 399,
+          "y2": 804
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 660,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 805
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 714,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 789
+        }
+      },
+      {
+        "id": 6,
+        "intended_item": "turret_sniper",
+        "label": "Sniper turret",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 816,
+          "width": 338,
+          "height": 163,
+          "x2": 409,
+          "y2": 978
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 841,
+          "width": 296,
+          "height": 119,
+          "x2": 399,
+          "y2": 959
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 815,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 960
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 869,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 944
+        }
+      },
+      {
+        "id": 7,
+        "intended_item": "turret_flamethrower",
+        "label": "Flamethrower turret",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 970,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 1133
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 996,
+          "width": 296,
+          "height": 118,
+          "x2": 399,
+          "y2": 1113
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 969,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 1114
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 1023,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 1098
+        }
+      },
+      {
+        "id": 8,
+        "intended_item": "mine_standard",
+        "label": "Mine",
+        "item_outer_rect": {
+          "x": 72,
+          "y": 1124,
+          "width": 338,
+          "height": 164,
+          "x2": 409,
+          "y2": 1287
+        },
+        "item_safe_rect": {
+          "x": 104,
+          "y": 1150,
+          "width": 296,
+          "height": 120,
+          "x2": 399,
+          "y2": 1269
+        },
+        "count_outer_rect": {
+          "x": 418,
+          "y": 1123,
+          "width": 110,
+          "height": 146,
+          "x2": 527,
+          "y2": 1268
+        },
+        "count_safe_rect": {
+          "x": 431,
+          "y": 1178,
+          "width": 83,
+          "height": 76,
+          "x2": 513,
+          "y2": 1253
+        }
+      }
+    ],
+    "decorative_bottom_vent": {
+      "x": 217,
+      "y": 1298,
+      "width": 188,
+      "height": 59,
+      "x2": 404,
+      "y2": 1356
+    },
+    "right_hazard_stripe_region": {
+      "x": 569,
+      "y": 875,
+      "width": 33,
+      "height": 95,
+      "x2": 601,
+      "y2": 969
+    }
+  },
+  "notes": [
+    "Place each defense sprite inside the corresponding item_safe_rect.",
+    "Place the inventory count text/number inside count_safe_rect.",
+    "All item boxes are the same size, and all count boxes are the same size.",
+    "Coordinates are relative to the cropped transparent PNG."
+  ]
+}

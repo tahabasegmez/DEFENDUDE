@@ -1,0 +1,57 @@
+{
+    "totalImages":  264,
+    "totalAnimations":  12,
+    "categories":  [
+                       {
+                           "name":  "character/left",
+                           "count":  28
+                       },
+                       {
+                           "name":  "character/right",
+                           "count":  30
+                       },
+                       {
+                           "name":  "defense/turret_parts_left",
+                           "count":  17
+                       },
+                       {
+                           "name":  "defense/turret_parts_right",
+                           "count":  15
+                       },
+                       {
+                           "name":  "ground_tiles",
+                           "count":  63
+                       },
+                       {
+                           "name":  "projectiles/left",
+                           "count":  6
+                       },
+                       {
+                           "name":  "projectiles/right",
+                           "count":  6
+                       },
+                       {
+                           "name":  "shop_icons/left",
+                           "count":  13
+                       },
+                       {
+                           "name":  "shop_icons/right",
+                           "count":  13
+                       },
+                       {
+                           "name":  "structures/generator",
+                           "count":  1
+                       },
+                       {
+                           "name":  "zombies/left",
+                           "count":  36
+                       },
+                       {
+                           "name":  "zombies/right",
+                           "count":  36
+                       }
+                   ],
+    "warnings":  [
+                     "Some source sets are intentionally asymmetric; verify left/right parity before binding gameplay-critical animations."
+                 ]
+}

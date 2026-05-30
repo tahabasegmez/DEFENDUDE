@@ -1,0 +1,50 @@
+{ "frames": {
+   "fast_zombie_frame_06 0.png": {
+    "frame": { "x": 2, "y": 2, "w": 80, "h": 116 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 41, "y": 1, "w": 78, "h": 114 },
+    "sourceSize": { "w": 119, "h": 115 },
+    "duration": 100
+   },
+   "fast_zombie_frame_06 1.png": {
+    "frame": { "x": 85, "y": 2, "w": 90, "h": 92 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 31, "y": 25, "w": 88, "h": 90 },
+    "sourceSize": { "w": 119, "h": 115 },
+    "duration": 100
+   },
+   "fast_zombie_frame_06 2.png": {
+    "frame": { "x": 178, "y": 2, "w": 119, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 65, "w": 117, "h": 50 },
+    "sourceSize": { "w": 119, "h": 115 },
+    "duration": 100
+   },
+   "fast_zombie_frame_06 3.png": {
+    "frame": { "x": 300, "y": 2, "w": 117, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 81, "w": 115, "h": 34 },
+    "sourceSize": { "w": 119, "h": 115 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.6-x64",
+  "image": "fast_zombie_frame_06-sheet.png",
+  "format": "RGBA8888",
+  "size": { "w": 419, "h": 120 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+bin/
+obj/
+node_modules/
+experiments/**/node_modules/
+dist/
+experiments/**/dist/
+wwwroot/app/
+wwwroot/game/
+wwwroot/lab/
+*.user
+.vs/
+.env
+.env.*
+!.env.example
+!experiments/**/.env.example

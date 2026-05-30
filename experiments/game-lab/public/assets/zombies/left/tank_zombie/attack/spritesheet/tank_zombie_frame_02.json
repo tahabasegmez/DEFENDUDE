@@ -1,0 +1,58 @@
+{ "frames": {
+   "tank_zombie_frame_02 0.png": {
+    "frame": { "x": 2, "y": 2, "w": 102, "h": 135 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 25, "y": 11, "w": 100, "h": 133 },
+    "sourceSize": { "w": 125, "h": 144 },
+    "duration": 100
+   },
+   "tank_zombie_frame_02 1.png": {
+    "frame": { "x": 107, "y": 2, "w": 112, "h": 126 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 20, "w": 110, "h": 124 },
+    "sourceSize": { "w": 125, "h": 144 },
+    "duration": 100
+   },
+   "tank_zombie_frame_02 2.png": {
+    "frame": { "x": 222, "y": 2, "w": 125, "h": 132 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 14, "w": 123, "h": 130 },
+    "sourceSize": { "w": 125, "h": 144 },
+    "duration": 100
+   },
+   "tank_zombie_frame_02 3.png": {
+    "frame": { "x": 350, "y": 2, "w": 118, "h": 146 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 9, "y": 0, "w": 116, "h": 144 },
+    "sourceSize": { "w": 125, "h": 144 },
+    "duration": 100
+   },
+   "tank_zombie_frame_02 4.png": {
+    "frame": { "x": 471, "y": 2, "w": 118, "h": 144 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 9, "y": 2, "w": 116, "h": 142 },
+    "sourceSize": { "w": 125, "h": 144 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.6-x64",
+  "image": "tank_zombie_frame_02-sheet.png",
+  "format": "RGBA8888",
+  "size": { "w": 591, "h": 150 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

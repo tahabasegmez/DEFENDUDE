@@ -1,0 +1,5 @@
+filename,label,category,width,height
+heart_full.png,heart_full,ui_hearts,380,353
+heart_half.png,heart_half,ui_hearts,384,353
+heart_empty.png,heart_empty,ui_hearts,381,353
+preview.png,preview_strip,ui_hearts,1177,353

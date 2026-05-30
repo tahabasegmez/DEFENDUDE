@@ -1,0 +1,42 @@
+{ "frames": {
+   "normal_zombie_frame_01 0.png": {
+    "frame": { "x": 2, "y": 2, "w": 115, "h": 147 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 113, "h": 145 },
+    "sourceSize": { "w": 113, "h": 145 },
+    "duration": 100
+   },
+   "normal_zombie_frame_01 1.png": {
+    "frame": { "x": 120, "y": 2, "w": 115, "h": 147 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 113, "h": 145 },
+    "sourceSize": { "w": 113, "h": 145 },
+    "duration": 100
+   },
+   "normal_zombie_frame_01 2.png": {
+    "frame": { "x": 238, "y": 2, "w": 115, "h": 147 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 113, "h": 145 },
+    "sourceSize": { "w": 113, "h": 145 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.6-x64",
+  "image": "normal_zombie_frame_01-sheet.png",
+  "format": "RGBA8888",
+  "size": { "w": 355, "h": 151 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "defendude",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets:manifest": "powershell -ExecutionPolicy Bypass -File ./tools/assets/Generate-AssetManifest.ps1",
+    "client:dev": "vite --host 127.0.0.1 --port 5173",
+    "client:build": "vite build",
+    "client:typecheck": "tsc --noEmit",
+    "build": "npm run assets:manifest && npm run client:typecheck && npm run client:build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
+  }
+}

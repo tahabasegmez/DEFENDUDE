@@ -1,0 +1,265 @@
+file,source,category,label,bbox_x1,bbox_y1,bbox_x2,bbox_y2
+projectiles/right/small_bullet.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,small_bullet,157,127,322,180
+projectiles/right/rifle_bullet.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,rifle_bullet,151,261,385,321
+projectiles/right/flamethrower_flame.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,flamethrower_flame,204,408,856,525
+projectiles/right/rocket.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,rocket,161,599,533,685
+projectiles/right/land_mine.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,land_mine,207,765,349,871
+projectiles/right/explosion_effect.png,"ChatGPT Image May 27, 2026, 09_39_32 PM(1).png",projectiles/right,explosion_effect,448,759,589,877
+projectiles/left/small_bullet.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,small_bullet,329,128,493,181
+projectiles/left/rifle_bullet.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,rifle_bullet,268,262,499,321
+projectiles/left/flamethrower_flame.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,flamethrower_flame,86,409,668,525
+projectiles/left/rocket.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,rocket,228,600,588,685
+projectiles/left/explosion_effect.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,explosion_effect,166,759,307,876
+projectiles/left/land_mine.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (1).png",projectiles/left,land_mine,401,765,542,871
+defense/turret_parts_right/wooden_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,wooden_spiked_fence,229,78,481,353
+defense/turret_parts_right/metal_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,metal_spiked_fence,564,80,843,353
+defense/turret_parts_right/electric_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,electric_spiked_fence,936,82,1229,352
+defense/turret_parts_right/pistol_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,pistol_turret_base_01,160,372,370,501
+defense/turret_parts_right/pistol_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,pistol_turret_barrel_normal,540,407,650,461
+defense/turret_parts_right/pistol_turret_barrel_normal_03.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,pistol_turret_barrel_normal_03,887,410,1018,463
+defense/turret_parts_right/machinegun_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,machinegun_turret_base_01,153,521,380,661
+defense/turret_parts_right/machinegun_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,machinegun_turret_barrel_normal,542,567,679,625
+defense/turret_parts_right/machinegun_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,machinegun_turret_base_03,890,573,1079,628
+defense/turret_parts_right/sniper_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,sniper_turret_base_01,139,677,389,828
+defense/turret_parts_right/sniper_turret_base_02.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,sniper_turret_base_02,536,713,807,769
+defense/turret_parts_right/sniper_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,sniper_turret_base_03,887,711,1303,779
+defense/turret_parts_right/flamethrower_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,flamethrower_turret_base_01,118,846,390,998
+defense/turret_parts_right/flamethrower_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,flamethrower_turret_barrel_normal,530,871,679,937
+defense/turret_parts_right/flamethrower_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_15_41 PM(1).png",defense/turret_parts_right,flamethrower_turret_base_03,885,876,1327,944
+defense/turret_parts_left/wooden_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,wooden_spiked_fence,228,77,479,353
+defense/turret_parts_left/metal_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,metal_spiked_fence,562,79,841,353
+defense/turret_parts_left/electric_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,electric_spiked_fence,930,81,1222,352
+defense/turret_parts_left/pistol_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,pistol_turret_base_01,159,373,368,501
+defense/turret_parts_left/pistol_turret_base_04.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,pistol_turret_base_04,1082,373,1289,501
+defense/turret_parts_left/pistol_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,pistol_turret_barrel_normal,489,408,596,461
+defense/turret_parts_left/pistol_turret_barrel_normal_03.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,pistol_turret_barrel_normal_03,854,411,963,467
+defense/turret_parts_left/machinegun_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,machinegun_turret_base_01,153,521,378,661
+defense/turret_parts_left/machinegun_turret_base_04.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,machinegun_turret_base_04,1071,521,1294,661
+defense/turret_parts_left/machinegun_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,machinegun_turret_barrel_normal,489,567,620,623
+defense/turret_parts_left/machinegun_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,machinegun_turret_base_03,833,570,997,626
+defense/turret_parts_left/sniper_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,sniper_turret_base_01,150,678,384,828
+defense/turret_parts_left/sniper_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,sniper_turret_base_03,743,678,1294,828
+defense/turret_parts_left/sniper_turret_base_02.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,sniper_turret_base_02,470,721,697,773
+defense/turret_parts_left/flamethrower_turret_base_01.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,flamethrower_turret_base_01,118,849,379,999
+defense/turret_parts_left/flamethrower_turret_base_03.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,flamethrower_turret_base_03,743,849,1326,999
+defense/turret_parts_left/flamethrower_turret_barrel_normal.png,"ChatGPT Image May 27, 2026, 10_39_42 PM (2).png",defense/turret_parts_left,flamethrower_turret_barrel_normal,468,877,601,941
+shop_icons/right/smg.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,smg,541,125,669,229
+shop_icons/right/rifle.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,rifle,739,134,925,213
+shop_icons/right/flamethrower.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,flamethrower,994,134,1164,228
+shop_icons/right/rocket_launcher.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,rocket_launcher,1223,134,1411,216
+shop_icons/right/pistol.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,pistol,104,137,200,210
+shop_icons/right/shotgun.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,shotgun,285,140,454,209
+shop_icons/right/wooden_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,wooden_spiked_fence,131,314,418,623
+shop_icons/right/metal_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,metal_spiked_fence,553,314,870,624
+shop_icons/right/electric_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,electric_spiked_fence,988,317,1320,624
+shop_icons/right/pistol_turret.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,pistol_turret,91,720,328,955
+shop_icons/right/machinegun_turret.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,machinegun_turret,419,715,656,955
+shop_icons/right/sniper_turret.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,sniper_turret,744,718,1020,955
+shop_icons/right/flamethrower_turret.png,"ChatGPT Image May 27, 2026, 10_30_15 PM(1).png",shop_icons/right,flamethrower_turret,1096,715,1336,955
+shop_icons/left/rocket_launcher.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,rocket_launcher,104,133,283,210
+shop_icons/left/flamethrower.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,flamethrower,336,123,504,213
+shop_icons/left/rifle.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,rifle,554,135,733,210
+shop_icons/left/smg.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,smg,814,123,936,222
+shop_icons/left/pistol.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,pistol,1261,136,1354,205
+shop_icons/left/shotgun.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,shotgun,1023,142,1179,207
+shop_icons/left/wooden_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,wooden_spiked_fence,178,332,487,619
+shop_icons/left/metal_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,metal_spiked_fence,578,332,879,619
+shop_icons/left/electric_spiked_fence.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,electric_spiked_fence,964,334,1265,619
+shop_icons/left/machinegun_turret.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,machinegun_turret,452,730,699,948
+shop_icons/left/sniper_turret.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,sniper_turret,804,730,1024,948
+shop_icons/left/pistol_turret.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,pistol_turret,106,733,329,948
+shop_icons/left/flamethrower_turret.png,"ChatGPT Image May 27, 2026, 10_39_43 PM (3).png",shop_icons/left,flamethrower_turret,1109,733,1326,948
+character/right/body_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_01,122,113,213,283
+character/right/body_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_02,250,113,338,283
+character/right/body_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_03,419,113,511,282
+character/right/body_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_04,553,113,648,281
+character/right/body_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_05,702,113,799,281
+character/right/body_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_06,853,113,945,281
+character/right/body_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_07,994,113,1083,282
+character/right/body_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_08,126,335,214,502
+character/right/body_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_09,250,338,346,501
+character/right/body_frame_10.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_10,472,335,561,503
+character/right/body_frame_11.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_11,619,335,707,503
+character/right/body_frame_12.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_12,139,540,238,696
+character/right/body_frame_13.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_13,271,540,369,696
+character/right/body_frame_14.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_14,433,556,552,694
+character/right/body_frame_15.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_15,598,602,750,692
+character/right/body_frame_16.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_16,796,620,965,692
+character/right/body_frame_17.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_17,1001,625,1165,692
+character/right/body_frame_18.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,body_frame_18,1205,646,1350,692
+character/right/arm_weapon_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_01,61,771,206,835
+character/right/arm_weapon_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_02,266,774,466,835
+character/right/arm_weapon_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_03,512,771,671,843
+character/right/arm_weapon_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_04,724,784,927,960
+character/right/arm_weapon_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_05,725,775,896,843
+character/right/arm_weapon_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_06,968,775,1149,852
+character/right/arm_weapon_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_07,1216,774,1401,844
+character/right/arm_weapon_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_08,61,882,232,952
+character/right/arm_weapon_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_09,266,885,486,951
+character/right/arm_weapon_frame_10.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_10,512,884,698,960
+character/right/arm_weapon_frame_11.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_11,952,891,1185,969
+character/right/arm_weapon_frame_12.png,"ChatGPT Image May 27, 2026, 09_28_10 PM(1).png",character/right,arm_weapon_frame_12,1205,885,1432,960
+character/left/body_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_01,190,108,264,263
+character/left/body_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_02,357,111,439,261
+character/left/body_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_03,507,113,595,261
+character/left/body_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_04,648,112,736,261
+character/left/body_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_05,801,112,884,263
+character/left/body_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_06,951,108,1024,263
+character/left/body_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_07,195,322,269,472
+character/left/body_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_08,363,322,437,472
+character/left/body_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_09,519,325,590,472
+character/left/body_frame_10.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_10,675,323,748,470
+character/left/body_frame_11.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_11,190,510,305,643
+character/left/body_frame_12.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_12,373,534,500,641
+character/left/body_frame_13.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_13,556,560,709,636
+character/left/body_frame_14.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_14,779,574,914,641
+character/left/body_frame_15.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_15,969,590,1109,643
+character/left/body_frame_16.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,body_frame_16,1158,588,1294,641
+character/left/arm_weapon_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_01,49,720,225,793
+character/left/arm_weapon_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_02,293,716,455,799
+character/left/arm_weapon_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_03,514,728,689,789
+character/left/arm_weapon_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_04,765,715,904,808
+character/left/arm_weapon_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_05,969,726,1134,787
+character/left/arm_weapon_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_06,1216,723,1318,790
+character/left/arm_weapon_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_07,237,871,450,958
+character/left/arm_weapon_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_08,22,872,222,947
+character/left/arm_weapon_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_09,484,878,689,943
+character/left/arm_weapon_frame_10.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_10,724,879,899,960
+character/left/arm_weapon_frame_11.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_11,931,877,1132,943
+character/left/arm_weapon_frame_12.png,"ChatGPT Image May 27, 2026, 10_39_44 PM (4).png",character/left,arm_weapon_frame_12,1163,877,1314,943
+zombies/right/normal_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_01,45,106,122,262
+zombies/right/normal_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_02,198,108,290,261
+zombies/right/normal_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_03,352,111,446,262
+zombies/right/normal_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_04,504,112,590,262
+zombies/right/normal_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_05,687,119,799,267
+zombies/right/normal_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_06,821,122,944,266
+zombies/right/normal_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_07,981,139,1080,268
+zombies/right/normal_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_08,1107,193,1232,266
+zombies/right/normal_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,normal_zombie_frame_09,1264,213,1427,266
+zombies/right/tank_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_01,35,333,154,507
+zombies/right/tank_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_02,187,336,316,511
+zombies/right/tank_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_03,342,335,474,512
+zombies/right/tank_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_04,489,337,623,511
+zombies/right/tank_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_05,649,332,809,506
+zombies/right/tank_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_06,799,345,953,506
+zombies/right/tank_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_07,970,349,1096,504
+zombies/right/tank_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_08,1095,403,1232,504
+zombies/right/tank_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,tank_zombie_frame_09,1249,433,1413,502
+zombies/right/fast_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_01,45,581,144,730
+zombies/right/fast_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_02,194,582,307,730
+zombies/right/fast_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_04,485,588,605,730
+zombies/right/fast_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_05,655,590,796,731
+zombies/right/fast_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_03,337,592,450,728
+zombies/right/fast_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_06,786,595,930,732
+zombies/right/fast_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_07,944,619,1079,730
+zombies/right/fast_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_08,1088,657,1217,730
+zombies/right/fast_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,fast_zombie_frame_09,1252,678,1401,734
+zombies/right/armored_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_01,47,795,141,986
+zombies/right/armored_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_02,192,795,299,981
+zombies/right/armored_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_03,337,795,439,984
+zombies/right/armored_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_04,487,793,579,986
+zombies/right/armored_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_05,635,796,794,985
+zombies/right/armored_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_06,783,801,944,985
+zombies/right/armored_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_07,920,847,1044,985
+zombies/right/armored_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_08,1067,886,1205,986
+zombies/right/armored_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 09_28_17 PM(1).png",zombies/right,armored_zombie_frame_09,1237,921,1399,986
+zombies/left/normal_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_01,51,107,135,259
+zombies/left/normal_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_02,205,109,291,259
+zombies/left/normal_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_04,444,120,560,259
+zombies/left/normal_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_05,597,115,717,260
+zombies/left/normal_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_06,794,114,876,259
+zombies/left/normal_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_07,935,114,1015,259
+zombies/left/normal_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_08,1085,113,1166,259
+zombies/left/normal_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_03,328,193,439,260
+zombies/left/normal_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,normal_zombie_frame_09,1248,208,1404,260
+zombies/left/tank_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_01,46,339,155,487
+zombies/left/tank_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_02,187,340,294,484
+zombies/left/tank_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_04,440,345,572,485
+zombies/left/tank_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_05,594,334,716,487
+zombies/left/tank_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_06,749,333,872,483
+zombies/left/tank_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_07,908,342,1022,487
+zombies/left/tank_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_08,1060,342,1167,486
+zombies/left/tank_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_03,313,352,430,484
+zombies/left/tank_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,tank_zombie_frame_09,1220,401,1404,486
+zombies/left/fast_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_01,55,572,145,699
+zombies/left/fast_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_02,215,573,313,699
+zombies/left/fast_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_03,368,572,467,698
+zombies/left/fast_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_04,526,572,648,698
+zombies/left/fast_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_05,672,574,797,699
+zombies/left/fast_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_06,855,576,939,699
+zombies/left/fast_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_07,988,601,1083,699
+zombies/left/fast_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_08,1115,641,1240,699
+zombies/left/fast_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,fast_zombie_frame_09,1293,658,1414,700
+zombies/left/armored_zombie_frame_01.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_01,48,777,143,940
+zombies/left/armored_zombie_frame_02.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_02,195,777,295,940
+zombies/left/armored_zombie_frame_03.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_03,342,780,436,940
+zombies/left/armored_zombie_frame_04.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_04,480,775,621,940
+zombies/left/armored_zombie_frame_05.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_05,628,774,772,941
+zombies/left/armored_zombie_frame_06.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_06,820,780,903,941
+zombies/left/armored_zombie_frame_07.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_07,969,801,1062,941
+zombies/left/armored_zombie_frame_08.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_08,1105,842,1214,941
+zombies/left/armored_zombie_frame_09.png,"ChatGPT Image May 27, 2026, 10_39_46 PM (5).png",zombies/left,armored_zombie_frame_09,1269,883,1410,947
+ground_tiles/tile_r01_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c01,23,24,158,157
+ground_tiles/tile_r01_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c02,176,24,310,157
+ground_tiles/tile_r01_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c03,328,23,462,157
+ground_tiles/tile_r01_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c04,480,24,614,157
+ground_tiles/tile_r01_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c05,632,23,766,157
+ground_tiles/tile_r01_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c06,785,24,919,157
+ground_tiles/tile_r01_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c07,937,24,1071,157
+ground_tiles/tile_r01_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c08,1090,24,1223,157
+ground_tiles/tile_r01_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r01_c09,1243,24,1377,157
+ground_tiles/tile_r02_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c01,23,175,157,309
+ground_tiles/tile_r02_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c02,176,175,310,309
+ground_tiles/tile_r02_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c03,328,175,462,309
+ground_tiles/tile_r02_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c04,480,175,614,309
+ground_tiles/tile_r02_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c05,632,175,766,309
+ground_tiles/tile_r02_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c06,785,175,918,309
+ground_tiles/tile_r02_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c07,937,175,1071,309
+ground_tiles/tile_r02_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c08,1090,175,1223,309
+ground_tiles/tile_r02_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r02_c09,1243,175,1377,309
+ground_tiles/tile_r03_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c01,23,327,157,461
+ground_tiles/tile_r03_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c02,176,327,310,461
+ground_tiles/tile_r03_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c03,328,327,462,461
+ground_tiles/tile_r03_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c04,480,327,614,461
+ground_tiles/tile_r03_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c05,632,327,766,461
+ground_tiles/tile_r03_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c06,785,327,919,461
+ground_tiles/tile_r03_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c07,937,327,1071,461
+ground_tiles/tile_r03_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c08,1090,327,1223,461
+ground_tiles/tile_r03_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r03_c09,1243,327,1377,461
+ground_tiles/tile_r04_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c01,23,480,157,614
+ground_tiles/tile_r04_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c02,176,480,310,614
+ground_tiles/tile_r04_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c03,328,480,462,614
+ground_tiles/tile_r04_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c04,480,480,614,614
+ground_tiles/tile_r04_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c05,632,480,766,614
+ground_tiles/tile_r04_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c06,785,480,918,614
+ground_tiles/tile_r04_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c07,937,480,1071,614
+ground_tiles/tile_r04_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c08,1090,480,1223,614
+ground_tiles/tile_r04_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r04_c09,1243,480,1377,614
+ground_tiles/tile_r05_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c01,23,633,157,767
+ground_tiles/tile_r05_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c02,176,633,310,767
+ground_tiles/tile_r05_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c03,328,633,462,767
+ground_tiles/tile_r05_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c04,480,633,614,767
+ground_tiles/tile_r05_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c05,632,633,766,767
+ground_tiles/tile_r05_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c06,785,633,918,767
+ground_tiles/tile_r05_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c07,937,633,1071,766
+ground_tiles/tile_r05_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c08,1090,633,1223,767
+ground_tiles/tile_r05_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r05_c09,1243,633,1377,767
+ground_tiles/tile_r06_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c01,23,785,157,917
+ground_tiles/tile_r06_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c02,176,785,310,918
+ground_tiles/tile_r06_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c03,328,785,462,918
+ground_tiles/tile_r06_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c04,480,785,614,917
+ground_tiles/tile_r06_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c05,632,785,766,918
+ground_tiles/tile_r06_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c06,785,785,918,917
+ground_tiles/tile_r06_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c07,937,785,1071,918
+ground_tiles/tile_r06_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c08,1090,785,1223,918
+ground_tiles/tile_r06_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r06_c09,1243,785,1377,918
+ground_tiles/tile_r07_c01.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c01,23,936,157,1069
+ground_tiles/tile_r07_c02.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c02,176,936,310,1069
+ground_tiles/tile_r07_c03.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c03,328,936,462,1069
+ground_tiles/tile_r07_c04.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c04,480,936,614,1069
+ground_tiles/tile_r07_c05.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c05,632,936,766,1069
+ground_tiles/tile_r07_c06.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c06,785,936,918,1069
+ground_tiles/tile_r07_c07.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c07,937,936,1071,1069
+ground_tiles/tile_r07_c08.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c08,1090,936,1224,1069
+ground_tiles/tile_r07_c09.png,"ChatGPT Image May 27, 2026, 09_43_36 PM.png",ground_tiles,tile_r07_c09,1243,936,1377,1069
+structures/generator/generator_2x2.png,"ChatGPT Image May 27, 2026, 09_59_10 PM(1).png",structures/generator,generator_2x2,282,282,970,902

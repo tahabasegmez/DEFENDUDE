@@ -1,0 +1,361 @@
+{
+  "file": "hud_post_apocalyptic.png",
+  "canvas": {
+    "width": 2154,
+    "height": 402
+  },
+  "coordinate_system": {
+    "origin": "top-left",
+    "x_axis": "increases to the right",
+    "y_axis": "increases downward",
+    "units": "pixels"
+  },
+  "rendering": {
+    "background": "transparent",
+    "scaling": {
+      "recommended_filter": "nearest-neighbor",
+      "integer_scale_preferred": true
+    }
+  },
+  "notes": [
+    "All coordinates are based on the cropped transparent HUD PNG.",
+    "Use inner_rect as the safest content area for placing icons, text, hearts, or numbers.",
+    "Weapon slot 1 is highlighted as the default selected slot in this HUD art."
+  ],
+  "regions": {
+    "portrait_panel": {
+      "purpose": "Character portrait / Doom-style face panel",
+      "rect": {
+        "x": 24,
+        "y": 18,
+        "width": 341,
+        "height": 359,
+        "x2": 364,
+        "y2": 376
+      },
+      "inner_rect": {
+        "x": 54,
+        "y": 46,
+        "width": 239,
+        "height": 245,
+        "x2": 292,
+        "y2": 290
+      }
+    },
+    "weapon_slots": [
+      {
+        "id": 1,
+        "purpose": "Weapon slot 1 (selected by default)",
+        "selected_default": true,
+        "rect": {
+          "x": 382,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 524,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 403,
+          "y": 141,
+          "width": 107,
+          "height": 109,
+          "x2": 509,
+          "y2": 249
+        }
+      },
+      {
+        "id": 2,
+        "purpose": "Weapon slot 2",
+        "selected_default": false,
+        "rect": {
+          "x": 532,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 674,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 551,
+          "y": 132,
+          "width": 108,
+          "height": 120,
+          "x2": 658,
+          "y2": 251
+        }
+      },
+      {
+        "id": 3,
+        "purpose": "Weapon slot 3",
+        "selected_default": false,
+        "rect": {
+          "x": 682,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 824,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 700,
+          "y": 132,
+          "width": 108,
+          "height": 120,
+          "x2": 807,
+          "y2": 251
+        }
+      },
+      {
+        "id": 4,
+        "purpose": "Weapon slot 4",
+        "selected_default": false,
+        "rect": {
+          "x": 831,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 973,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 848,
+          "y": 132,
+          "width": 108,
+          "height": 120,
+          "x2": 955,
+          "y2": 251
+        }
+      },
+      {
+        "id": 5,
+        "purpose": "Weapon slot 5",
+        "selected_default": false,
+        "rect": {
+          "x": 980,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 1122,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 996,
+          "y": 132,
+          "width": 108,
+          "height": 120,
+          "x2": 1103,
+          "y2": 251
+        }
+      },
+      {
+        "id": 6,
+        "purpose": "Weapon slot 6",
+        "selected_default": false,
+        "rect": {
+          "x": 1128,
+          "y": 113,
+          "width": 143,
+          "height": 153,
+          "x2": 1270,
+          "y2": 265
+        },
+        "inner_rect": {
+          "x": 1143,
+          "y": 132,
+          "width": 109,
+          "height": 120,
+          "x2": 1251,
+          "y2": 251
+        }
+      }
+    ],
+    "weapon_magazine_boxes": [
+      {
+        "id": 1,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 1",
+        "linked_weapon_slot": 1,
+        "rect": {
+          "x": 385,
+          "y": 276,
+          "width": 133,
+          "height": 57,
+          "x2": 517,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 408,
+          "y": 286,
+          "width": 99,
+          "height": 43,
+          "x2": 506,
+          "y2": 328
+        }
+      },
+      {
+        "id": 2,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 2",
+        "linked_weapon_slot": 2,
+        "rect": {
+          "x": 534,
+          "y": 276,
+          "width": 141,
+          "height": 57,
+          "x2": 674,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 555,
+          "y": 286,
+          "width": 103,
+          "height": 43,
+          "x2": 657,
+          "y2": 328
+        }
+      },
+      {
+        "id": 3,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 3",
+        "linked_weapon_slot": 3,
+        "rect": {
+          "x": 684,
+          "y": 276,
+          "width": 141,
+          "height": 57,
+          "x2": 824,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 704,
+          "y": 286,
+          "width": 103,
+          "height": 43,
+          "x2": 806,
+          "y2": 328
+        }
+      },
+      {
+        "id": 4,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 4",
+        "linked_weapon_slot": 4,
+        "rect": {
+          "x": 833,
+          "y": 276,
+          "width": 142,
+          "height": 57,
+          "x2": 974,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 853,
+          "y": 286,
+          "width": 102,
+          "height": 43,
+          "x2": 954,
+          "y2": 328
+        }
+      },
+      {
+        "id": 5,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 5",
+        "linked_weapon_slot": 5,
+        "rect": {
+          "x": 982,
+          "y": 276,
+          "width": 143,
+          "height": 57,
+          "x2": 1124,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 1002,
+          "y": 286,
+          "width": 102,
+          "height": 43,
+          "x2": 1103,
+          "y2": 328
+        }
+      },
+      {
+        "id": 6,
+        "purpose": "Per-weapon magazine / reserve ammo text box for weapon slot 6",
+        "linked_weapon_slot": 6,
+        "rect": {
+          "x": 1131,
+          "y": 276,
+          "width": 141,
+          "height": 57,
+          "x2": 1271,
+          "y2": 332
+        },
+        "inner_rect": {
+          "x": 1152,
+          "y": 286,
+          "width": 100,
+          "height": 43,
+          "x2": 1251,
+          "y2": 328
+        }
+      }
+    ],
+    "selected_weapon_current_mag_panel": {
+      "purpose": "Current bullets left in the selected weapon's active magazine / main ammo readout",
+      "rect": {
+        "x": 1283,
+        "y": 108,
+        "width": 316,
+        "height": 180,
+        "x2": 1598,
+        "y2": 287
+      },
+      "inner_rect": {
+        "x": 1302,
+        "y": 129,
+        "width": 278,
+        "height": 124,
+        "x2": 1579,
+        "y2": 252
+      }
+    },
+    "health_hearts_panel": {
+      "purpose": "Health hearts area (intended for 5 to 10 heart icons)",
+      "heart_capacity_min": 5,
+      "heart_capacity_max": 10,
+      "rect": {
+        "x": 1643,
+        "y": 108,
+        "width": 498,
+        "height": 126,
+        "x2": 2140,
+        "y2": 233
+      },
+      "inner_rect": {
+        "x": 1680,
+        "y": 128,
+        "width": 419,
+        "height": 62,
+        "x2": 2098,
+        "y2": 189
+      }
+    },
+    "coin_panel": {
+      "purpose": "Coin icon + coin amount display area",
+      "rect": {
+        "x": 1641,
+        "y": 236,
+        "width": 373,
+        "height": 137,
+        "x2": 2013,
+        "y2": 372
+      },
+      "inner_rect": {
+        "x": 1669,
+        "y": 265,
+        "width": 299,
+        "height": 100,
+        "x2": 1967,
+        "y2": 364
+      }
+    }
+  }
+}
