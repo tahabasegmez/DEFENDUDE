@@ -320,6 +320,7 @@ export const trialPlacementTuning = {
 } as const;
 
 export const trialApocalypseTuning = {
+  scoreSecondsPerPoint: 1,
   spawnIntervalStartMs: 1400,
   spawnIntervalMinMs: 430,
   spawnIntervalRampDurationMs: 180000,
@@ -327,7 +328,12 @@ export const trialApocalypseTuning = {
   maxAliveEnd: 64,
   maxAliveRampDurationMs: 240000,
   fastUnlockMs: 25000,
-  giantUnlockMs: 70000
+  giantUnlockMs: 70000,
+  scoreHud: {
+    offsetPixels: { x: -200, y: -70 },
+    scale: 1,
+    fontSizePixels: 28
+  }
 } as const;
 
 export const trialMainMenuTuning = {
@@ -348,6 +354,30 @@ export const trialMainMenuTuning = {
   lossTextEndScale: 1.8,
   lossTextDurationMs: 1500,
   lossButtonSpacingPixels: 62
+} as const;
+
+export const trialMainMenuAdTuning = {
+  enabled: true,
+  localOnly: true,
+  depth: 200001,
+  sidePaddingPixels: 0,
+  topPaddingPixels: 0,
+  bottomPaddingPixels: 0,
+  maxWidthPixels: 340,
+  alpha: 1,
+  hoverScale: 1.015,
+  leftBanner: {
+    imagePath: "/assets/ads/gta6_banner.png",
+    scale: 0.75,
+    offsetPixels: { x: 0, y: 0 },
+    url: "https://www.rockstargames.com/VI"
+  },
+  rightBanner: {
+    imagePath: "/assets/ads/defendude_banner.png",
+    scale: 0.75,
+    offsetPixels: { x: 0, y: 0 },
+    url: ""
+  }
 } as const;
 
 export const trialFenceDebugHealthTuning = {

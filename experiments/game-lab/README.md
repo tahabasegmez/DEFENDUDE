@@ -24,6 +24,26 @@ npm run dev
 npm run build
 ```
 
+Repo kokunden cift tik otomasyonlari:
+
+```text
+Start-GameLab.cmd
+Create-ReviewZip.cmd
+```
+
+`Start-GameLab.cmd` lokal Vite server'i baslatir ve Chrome'da `http://127.0.0.1:5174/` adresini acar.
+Zip'ten cikan temiz projede `node_modules` yoksa once `experiments/game-lab` bagimliliklarini kurar. Ilk kurulum icin Node.js LTS ve internet gerekir; kurulumdan sonra local save modu internetsiz calisir.
+
+`Create-ReviewZip.cmd` hocaya gonderilecek zip dosyasini `artifacts/DEFENDUDE-trial-review.zip` olarak uretir. Zip icerigi `tools/package/review-zip.config.json` dosyasindan ayarlanir.
+
+Yerel/online save modu `experiments/game-lab/.env` icinden secilir:
+
+```text
+VITE_TRIAL_PERSISTENCE_MODE=local
+```
+
+`local` internetsiz calisir ve localStorage kullanir. `supabase` online Supabase kayitlarini kullanir.
+
 ## Canliya Alma Hazirligi
 
 Cloudflare Pages icin beklenen ayarlar:
@@ -37,7 +57,7 @@ Build output directory: dist
 Cloudflare Pages environment variables:
 
 ```text
-VITE_SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
+VITE_SUPABASE_URL=https://qntzzvvjfrinvebrcicd.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_wN5V138Kyv2gZ5J1rs-8vQ_kHK30hT5
 ```
 

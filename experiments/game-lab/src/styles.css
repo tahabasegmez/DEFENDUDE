@@ -13,3 +13,65 @@ canvas {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+
+.trial-main-menu-ads {
+  --ad-z-index: 200001;
+  --ad-side-padding: 0px;
+  --ad-top-padding: 0px;
+  --ad-bottom-padding: 0px;
+  --ad-max-width: 340px;
+  --ad-alpha: 1;
+  --ad-hover-scale: 1.015;
+  --ad-left-scale: 1;
+  --ad-left-offset-x: 0px;
+  --ad-left-offset-y: 0px;
+  --ad-right-scale: 1;
+  --ad-right-offset-x: 0px;
+  --ad-right-offset-y: 0px;
+  position: fixed;
+  inset: 0;
+  z-index: var(--ad-z-index);
+  pointer-events: none;
+}
+
+.trial-main-menu-ad {
+  position: fixed;
+  top: var(--ad-top-padding);
+  bottom: var(--ad-bottom-padding);
+  width: min(var(--ad-max-width), 22vw);
+  opacity: var(--ad-alpha);
+  pointer-events: auto;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.trial-main-menu-ad--left {
+  left: var(--ad-side-padding);
+  transform-origin: left center;
+  transform: translate(var(--ad-left-offset-x), var(--ad-left-offset-y)) scale(var(--ad-left-scale));
+}
+
+.trial-main-menu-ad--right {
+  right: var(--ad-side-padding);
+  transform-origin: right center;
+  transform: translate(var(--ad-right-offset-x), var(--ad-right-offset-y)) scale(var(--ad-right-scale));
+}
+
+.trial-main-menu-ad--left:hover {
+  transform: translate(var(--ad-left-offset-x), var(--ad-left-offset-y)) scale(calc(var(--ad-left-scale) * var(--ad-hover-scale)));
+}
+
+.trial-main-menu-ad--right:hover {
+  transform: translate(var(--ad-right-offset-x), var(--ad-right-offset-y)) scale(calc(var(--ad-right-scale) * var(--ad-hover-scale)));
+}
+
+.trial-main-menu-ad:hover {
+  filter: brightness(1.08);
+}
+
+.trial-main-menu-ad img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  user-select: none;
+}

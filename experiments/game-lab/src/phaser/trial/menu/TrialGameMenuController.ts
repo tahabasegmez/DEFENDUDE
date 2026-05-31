@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import type { TrialAuthResult, TrialScoreEntry } from "../persistence/TrialPersistenceTypes";
 import { trialMainMenuTuning, trialTypographyTuning } from "../tuning/TrialGameplayTuning";
+import { TrialMainMenuDomAdController } from "./TrialMainMenuDomAdController";
 
 export type TrialGameMode = "waves" | "apocalypse" | "shootingRange";
 
@@ -13,13 +14,13 @@ export interface TrialGameMenuControllerOptions {
   readonly onStartMode: (mode: TrialGameMode) => void;
   readonly onReturnToMainMenu: () => void;
   readonly onRestart: () => void;
-  readonly onLoadCheckpoint: () => void;
-  readonly onSaveCheckpoint: () => void;
+  readonly onLoadCheckpoint: () => Promise<void>;
+  readonly onSaveCheckpoint: () => Promise<void>;
   readonly canSaveCheckpoint: () => boolean;
-  readonly onRegister: (username: string, pin: string, confirmPin: string) => TrialAuthResult;
-  readonly onSignIn: (username: string, pin: string) => TrialAuthResult;
+  readonly onRegister: (username: string, pin: string, confirmPin: string) => Promise<TrialAuthResult>;
+  readonly onSignIn: (username: string, pin: string) => Promise<TrialAuthResult>;
   readonly getUsername: () => string;
-  readonly getScoreboard: (mode: ScoreboardMode) => readonly TrialScoreEntry[];
+  readonly getScoreboard: (mode: ScoreboardMode) => Promise<readonly TrialScoreEntry[]>;
 }
 
 interface MenuButton {
@@ -43,15 +44,16 @@ export class TrialGameMenuController {
   private readonly onStartMode: (mode: TrialGameMode) => void;
   private readonly onReturnToMainMenu: () => void;
   private readonly onRestart: () => void;
-  private readonly onLoadCheckpoint: () => void;
-  private readonly onSaveCheckpoint: () => void;
+  private readonly onLoadCheckpoint: () => Promise<void>;
+  private readonly onSaveCheckpoint: () => Promise<void>;
   private readonly canSaveCheckpoint: () => boolean;
-  private readonly onRegister: (username: string, pin: string, confirmPin: string) => TrialAuthResult;
-  private readonly onSignIn: (username: string, pin: string) => TrialAuthResult;
+  private readonly onRegister: (username: string, pin: string, confirmPin: string) => Promise<TrialAuthResult>;
+  private readonly onSignIn: (username: string, pin: string) => Promise<TrialAuthResult>;
   private readonly getUsername: () => string;
-  private readonly getScoreboard: (mode: ScoreboardMode) => readonly TrialScoreEntry[];
+  private readonly getScoreboard: (mode: ScoreboardMode) => Promise<readonly TrialScoreEntry[]>;
   private readonly overlay: Phaser.GameObjects.Rectangle;
   private readonly transition: Phaser.GameObjects.Graphics;
+  private readonly mainMenuAds: TrialMainMenuDomAdController;
   private readonly scrollbarTrack: Phaser.GameObjects.Rectangle;
   private readonly scrollbarThumb: Phaser.GameObjects.Rectangle;
   private readonly buttons: MenuButton[] = [];
@@ -61,6 +63,7 @@ export class TrialGameMenuController {
   private authMessageLabel: Phaser.GameObjects.Text | null = null;
   private authMessage = "";
   private scoreboardMode: ScoreboardMode = "waves";
+  private scoreboardScores: readonly TrialScoreEntry[] = [];
   private scoreboardOffset = 0;
   private gameplayStarted = false;
   private isTransitioning = false;
@@ -83,6 +86,7 @@ export class TrialGameMenuController {
       .setScrollFactor(0)
       .setDepth(200000);
     this.transition = this.scene.add.graphics().setScrollFactor(0).setDepth(210000).setVisible(false);
+    this.mainMenuAds = new TrialMainMenuDomAdController();
     this.scrollbarTrack = this.scene.add.rectangle(0, 0, 8, 1, 0x2a241a, 0).setScrollFactor(0).setDepth(200002);
     this.scrollbarThumb = this.scene.add.rectangle(0, 0, 8, 1, 0xf1c75b, 0).setScrollFactor(0).setDepth(200003);
     this.escKey = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.ESC);
@@ -117,6 +121,7 @@ export class TrialGameMenuController {
     }
 
     this.state = "loss";
+    this.mainMenuAds.hide();
     this.clearButtons();
     this.overlay.setVisible(true);
     const loss = this.createButton("YOU LOSE", () => undefined);
@@ -144,6 +149,7 @@ export class TrialGameMenuController {
 
   startModeDirect(mode: TrialGameMode): void {
     this.gameplayStarted = true;
+    this.mainMenuAds.hide();
     this.hideMenu();
     this.onStartMode(mode);
   }
@@ -153,20 +159,22 @@ export class TrialGameMenuController {
     this.clearButtons();
     this.overlay.setVisible(true);
     this.hideScrollbar();
+    this.mainMenuAds.show();
     this.buttons.push(this.createButton(`PLAYER: ${this.getUsername()}`, () => this.showAuth("signin")));
     this.buttons.push(this.createButton("REGISTER", () => this.showAuth("register")));
     this.buttons.push(this.createButton("SIGN IN", () => this.showAuth("signin")));
     this.buttons.push(this.createButton("WAVE MODE", () => this.runTransition(() => this.startMode("waves"))));
     this.buttons.push(this.createButton("APOCALYPSE MODE", () => this.runTransition(() => this.startMode("apocalypse"))));
     this.buttons.push(this.createButton("SHOOTING RANGE", () => this.runTransition(() => this.startMode("shootingRange"))));
-    this.buttons.push(this.createButton("LOAD CHECKPOINT", () => this.runTransition(this.onLoadCheckpoint)));
-    this.buttons.push(this.createButton("SCOREBOARD", () => this.showScoreboard()));
+    this.buttons.push(this.createButton("LOAD CHECKPOINT", () => this.runTransition(() => void this.onLoadCheckpoint())));
+    this.buttons.push(this.createButton("SCOREBOARD", () => void this.showScoreboard()));
     this.buttons.push(this.createButton("SETTINGS", () => undefined));
     this.layout();
   }
 
-  private showScoreboard(): void {
+  private async showScoreboard(): Promise<void> {
     this.state = "scoreboard";
+    this.mainMenuAds.hide();
     this.clearButtons();
     this.overlay.setVisible(true);
     this.scrollbarTrack.setAlpha(0.5);
@@ -175,15 +183,15 @@ export class TrialGameMenuController {
     this.buttons.push(this.createButton(this.scoreboardMode === "waves" ? "WAVE SCORES >" : "< WAVE SCORES", () => {
       this.scoreboardMode = "waves";
       this.scoreboardOffset = 0;
-      this.showScoreboard();
+      void this.showScoreboard();
     }));
     this.buttons.push(this.createButton(this.scoreboardMode === "apocalypse" ? "APOCALYPSE SCORES >" : "< APOCALYPSE SCORES", () => {
       this.scoreboardMode = "apocalypse";
       this.scoreboardOffset = 0;
-      this.showScoreboard();
+      void this.showScoreboard();
     }));
-    const scores = this.getScoreboard(this.scoreboardMode);
-    const visibleScores = scores.slice(this.scoreboardOffset, this.scoreboardOffset + 8);
+    this.scoreboardScores = await this.getScoreboard(this.scoreboardMode);
+    const visibleScores = this.scoreboardScores.slice(this.scoreboardOffset, this.scoreboardOffset + 8);
     if (visibleScores.length === 0) {
       this.buttons.push(this.createStaticLabel("-"));
     }
@@ -201,6 +209,7 @@ export class TrialGameMenuController {
 
   private showAuth(mode: AuthMode): void {
     this.state = "auth";
+    this.mainMenuAds.hide();
     this.focusedInput = null;
     this.authMessageLabel = null;
     this.authMessage = "";
@@ -222,17 +231,17 @@ export class TrialGameMenuController {
     const message = this.createStaticLabel(this.authMessage, "#e6b15a");
     this.authMessageLabel = message.label;
     this.buttons.push(message);
-    this.buttons.push(this.createButton(mode === "register" ? "CREATE PLAYER" : "SIGN IN", () => {
+    this.buttons.push(this.createButton(mode === "register" ? "CREATE PLAYER" : "SIGN IN", () => void (async () => {
       const result = mode === "register"
-        ? this.onRegister(username.input!.value, pin.input!.value, confirmPin?.input?.value ?? "")
-        : this.onSignIn(username.input!.value, pin.input!.value);
+        ? await this.onRegister(username.input!.value, pin.input!.value, confirmPin?.input?.value ?? "")
+        : await this.onSignIn(username.input!.value, pin.input!.value);
       this.authMessage = result.message;
       if (result.success) {
         this.showMainMenu();
         return;
       }
       this.refreshAuthMessage();
-    }));
+    })()));
     this.buttons.push(this.createButton("BACK", () => this.showMainMenu()));
     this.focusedInput = username.input ?? null;
     this.layout();
@@ -240,6 +249,7 @@ export class TrialGameMenuController {
 
   private showInGameMenu(): void {
     this.state = "inGame";
+    this.mainMenuAds.hide();
     this.clearButtons();
     this.overlay.setVisible(true);
     this.buttons.push(this.createButton("RETURN TO MAIN MENU", () => this.runTransition(() => {
@@ -247,7 +257,7 @@ export class TrialGameMenuController {
       this.onReturnToMainMenu();
     })));
     if (this.canSaveCheckpoint()) {
-      this.buttons.push(this.createButton("SAVE CHECKPOINT", () => this.onSaveCheckpoint()));
+      this.buttons.push(this.createButton("SAVE CHECKPOINT", () => void this.onSaveCheckpoint()));
     }
     this.buttons.push(this.createButton("SETTINGS", () => undefined));
     this.layout();
@@ -255,12 +265,14 @@ export class TrialGameMenuController {
 
   private hideMenu(): void {
     this.state = "hidden";
+    this.mainMenuAds.hide();
     this.clearButtons();
     this.overlay.setVisible(false);
   }
 
   private startMode(mode: TrialGameMode): void {
     this.gameplayStarted = true;
+    this.mainMenuAds.hide();
     this.hideMenu();
     this.onStartMode(mode);
   }
@@ -430,6 +442,7 @@ export class TrialGameMenuController {
 
     this.refreshInputLabels();
     this.layoutScoreboardScrollbar(centerX, startY, step, zoom);
+    this.mainMenuAds.layout();
   }
 
   private getButtonScale(button: MenuButton): number {
@@ -513,15 +526,14 @@ export class TrialGameMenuController {
   }
 
   private scrollScoreboard(direction: number): void {
-    const scores = this.getScoreboard(this.scoreboardMode);
-    const maxOffset = Math.max(0, scores.length - 8);
+    const maxOffset = Math.max(0, this.scoreboardScores.length - 8);
     const nextOffset = Phaser.Math.Clamp(this.scoreboardOffset + direction, 0, maxOffset);
     if (nextOffset === this.scoreboardOffset) {
       return;
     }
 
     this.scoreboardOffset = nextOffset;
-    this.showScoreboard();
+    void this.showScoreboard();
   }
 
   private layoutScoreboardScrollbar(centerX: number, startY: number, step: number, zoom: number): void {
@@ -530,7 +542,6 @@ export class TrialGameMenuController {
       return;
     }
 
-    const scores = this.getScoreboard(this.scoreboardMode);
     const trackHeight = step * 8;
     const trackX = centerX + 360 / zoom;
     const trackY = startY + step * 5;
@@ -539,9 +550,9 @@ export class TrialGameMenuController {
       .setPosition(trackX, trackY)
       .setSize(8 / zoom, trackHeight);
 
-    const visibleRatio = scores.length <= 0 ? 1 : Math.min(1, 8 / scores.length);
+    const visibleRatio = this.scoreboardScores.length <= 0 ? 1 : Math.min(1, 8 / this.scoreboardScores.length);
     const thumbHeight = Math.max(28 / zoom, trackHeight * visibleRatio);
-    const maxOffset = Math.max(1, scores.length - 8);
+    const maxOffset = Math.max(1, this.scoreboardScores.length - 8);
     const progress = maxOffset <= 0 ? 0 : this.scoreboardOffset / maxOffset;
     const thumbTravel = trackHeight - thumbHeight;
     this.scrollbarThumb

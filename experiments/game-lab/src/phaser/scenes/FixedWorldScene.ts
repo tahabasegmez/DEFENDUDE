@@ -31,7 +31,7 @@ import { preloadTrialMainHudAssets } from "../trial/hud/TrialMainHudAssets";
 import { TrialDayNightController } from "../trial/lighting/TrialDayNightController";
 import type { TrialDayNightMode } from "../trial/lighting/TrialDayNightController";
 import { TrialGameMenuController, type TrialGameMode } from "../trial/menu/TrialGameMenuController";
-import { TrialLocalStoragePersistence } from "../trial/persistence/TrialLocalStoragePersistence";
+import { createTrialPersistence } from "../trial/persistence/createTrialPersistence";
 import type { TrialAuthResult, TrialCheckpointData } from "../trial/persistence/TrialPersistenceTypes";
 import { TrialPlayerHealth } from "../trial/player/TrialPlayerHealth";
 import { TrialPlacementController } from "../trial/placement/TrialPlacementController";
@@ -41,7 +41,7 @@ import { preloadTrialShopAssets } from "../trial/shop/TrialShopAssets";
 import { TrialShopMenu } from "../trial/shop/TrialShopMenu";
 import { TrialGeneratorController } from "../trial/structures/TrialGeneratorController";
 import { preloadTrialStructureAssets } from "../trial/structures/TrialStructureAssets";
-import { trialCameraTuning, trialPlayerHealthTuning } from "../trial/tuning/TrialGameplayTuning";
+import { trialApocalypseTuning, trialCameraTuning, trialPlayerHealthTuning } from "../trial/tuning/TrialGameplayTuning";
 import { TrialWaveController } from "../trial/waves/TrialWaveController";
 import { createTrialZombieAnimations, preloadTrialZombieAssets } from "../trial/zombies/TrialZombieAssets";
 import { TrialZombieManager } from "../trial/zombies/TrialZombieManager";
@@ -65,7 +65,7 @@ export class FixedWorldScene extends Phaser.Scene {
   private trialZombieManager?: TrialZombieManager;
   private trialWaveController?: TrialWaveController;
   private trialGameMenu?: TrialGameMenuController;
-  private readonly persistence = new TrialLocalStoragePersistence();
+  private readonly persistence = createTrialPersistence();
   private apocalypseScoreText?: Phaser.GameObjects.Text;
   private playerHealth?: TrialPlayerHealth;
   private trialInventory?: TrialInventoryModel;
@@ -75,6 +75,7 @@ export class FixedWorldScene extends Phaser.Scene {
   private restartMode: TrialGameMode | null = null;
   private checkpointToLoad: TrialCheckpointData | null = null;
   private gameOverShown = false;
+  private scoreSavedForCurrentRun = false;
   private cameraController?: WorldCameraController;
 
   constructor() {
@@ -218,7 +219,7 @@ export class FixedWorldScene extends Phaser.Scene {
     this.trialGameMenu = new TrialGameMenuController({
       scene: this,
       onStartMode: (mode) => this.startGameMode(mode),
-      onReturnToMainMenu: () => this.scene.restart({ forceMainMenu: true, startMode: null, checkpoint: null }),
+      onReturnToMainMenu: () => void this.returnToMainMenu(),
       onRestart: () => this.scene.restart({ startMode: this.currentGameMode ?? "waves" }),
       onLoadCheckpoint: () => this.loadCheckpointFromMenu(),
       onSaveCheckpoint: () => this.saveCheckpoint("manual"),
@@ -230,7 +231,7 @@ export class FixedWorldScene extends Phaser.Scene {
     });
     this.apocalypseScoreText = this.add.text(0, 0, "", {
       fontFamily: "Arial",
-      fontSize: "28px",
+      fontSize: `${trialApocalypseTuning.scoreHud.fontSizePixels}px`,
       color: "#f2e6c9",
       stroke: "#130f0a",
       strokeThickness: 6
@@ -304,6 +305,7 @@ export class FixedWorldScene extends Phaser.Scene {
   private startGameMode(mode: TrialGameMode): void {
     this.currentGameMode = mode;
     this.gameOverShown = false;
+    this.scoreSavedForCurrentRun = false;
     this.trialMainHud?.setVisible(true);
 
     if (mode === "waves") {
@@ -354,7 +356,7 @@ export class FixedWorldScene extends Phaser.Scene {
     this.dayNightController?.setMode("day");
     this.trialWaveController.completeWave();
     this.syncPreparationUiForDayNight();
-    this.saveCheckpoint("wave-complete");
+    void this.saveCheckpoint("wave-complete");
   }
 
   private handleGameOver(): void {
@@ -367,7 +369,7 @@ export class FixedWorldScene extends Phaser.Scene {
     }
 
     this.gameOverShown = true;
-    this.saveScore();
+    void this.saveScore();
     this.trialShopMenu?.setCanOpen(false);
     this.trialPlacementController?.setEnabled(false);
     this.trialGameMenu?.showLoss();
@@ -407,8 +409,8 @@ export class FixedWorldScene extends Phaser.Scene {
     }
   }
 
-  private loadCheckpointFromMenu(): void {
-    const checkpoint = this.persistence.loadCheckpoint(this.persistence.getUsername());
+  private async loadCheckpointFromMenu(): Promise<void> {
+    const checkpoint = await this.persistence.loadCheckpoint(this.persistence.getUsername());
     if (!checkpoint) {
       window.alert("No checkpoint found for this player.");
       return;
@@ -440,7 +442,7 @@ export class FixedWorldScene extends Phaser.Scene {
     this.trialWeaponFireController?.restore(checkpoint.weapons);
   }
 
-  private saveCheckpoint(_reason: "manual" | "wave-complete"): void {
+  private async saveCheckpoint(_reason: "manual" | "wave-complete"): Promise<void> {
     if (!this.currentGameMode || !this.playerHealth || !this.trialCoinWallet || !this.trialInventory || !this.trialWeaponFireController || !this.trialGenerator) {
       return;
     }
@@ -450,7 +452,7 @@ export class FixedWorldScene extends Phaser.Scene {
     }
 
     const completedWave = this.trialWaveController?.getCompletedWave() ?? 0;
-    this.persistence.saveCheckpoint({
+    await this.persistence.saveCheckpoint({
       username: this.persistence.getUsername(),
       mode: "waves",
       completedWave,
@@ -463,8 +465,8 @@ export class FixedWorldScene extends Phaser.Scene {
     });
   }
 
-  private saveScore(): void {
-    if (!this.currentGameMode) {
+  private async saveScore(): Promise<void> {
+    if (!this.currentGameMode || this.scoreSavedForCurrentRun) {
       return;
     }
 
@@ -475,28 +477,47 @@ export class FixedWorldScene extends Phaser.Scene {
     const score = this.currentGameMode === "waves"
       ? this.trialWaveController?.getCompletedWave() ?? 0
       : this.currentGameMode === "apocalypse"
-        ? Math.floor((this.trialZombieManager?.getApocalypseElapsedMs() ?? 0) / 30000)
+        ? this.getApocalypseScore()
         : 0;
     const label = this.currentGameMode === "apocalypse" ? `${score} PTS` : `WAVE ${score}`;
-    this.persistence.addScore({
+    await this.persistence.addScore({
       username: this.persistence.getUsername(),
       mode: this.currentGameMode,
       score,
       label,
       createdAtIso: new Date().toISOString()
     });
+    this.scoreSavedForCurrentRun = true;
   }
 
-  private registerPlayer(username: string, pin: string, confirmPin: string): TrialAuthResult {
+  private async returnToMainMenu(): Promise<void> {
+    if (this.currentGameMode === "apocalypse" || this.currentGameMode === "waves") {
+      await this.saveScore();
+    }
+
+    this.scene.restart({ forceMainMenu: true, startMode: null, checkpoint: null });
+  }
+
+  private async registerPlayer(username: string, pin: string, confirmPin: string): Promise<TrialAuthResult> {
     if (pin !== confirmPin) {
       return { success: false, message: "PIN confirmation does not match." };
     }
 
-    return this.persistence.register(username, pin);
+    try {
+      return await this.persistence.register(username, pin);
+    }
+    catch {
+      return { success: false, message: "Register failed. Check Supabase setup." };
+    }
   }
 
-  private signInPlayer(username: string, pin: string): TrialAuthResult {
-    return this.persistence.signIn(username, pin);
+  private async signInPlayer(username: string, pin: string): Promise<TrialAuthResult> {
+    try {
+      return await this.persistence.signIn(username, pin);
+    }
+    catch {
+      return { success: false, message: "Sign in failed. Check Supabase setup." };
+    }
   }
 
   private updateApocalypseScoreHud(): void {
@@ -512,11 +533,18 @@ export class FixedWorldScene extends Phaser.Scene {
 
     const width = this.cameras.main.width || this.scale.width;
     const zoom = this.cameras.main.zoom || 1;
-    const score = Math.floor((this.trialZombieManager?.getApocalypseElapsedMs() ?? 0) / 30000);
+    const score = this.getApocalypseScore();
+    const scoreHud = trialApocalypseTuning.scoreHud;
     this.apocalypseScoreText
       .setText(`SCORE ${score}`)
-      .setPosition((width - 36) / zoom, 22 / zoom)
-      .setScale(1 / zoom);
+      .setFontSize(scoreHud.fontSizePixels)
+      .setPosition((width + scoreHud.offsetPixels.x) / zoom, scoreHud.offsetPixels.y / zoom)
+      .setScale(scoreHud.scale / zoom);
+  }
+
+  private getApocalypseScore(): number {
+    const secondsPerPoint = Math.max(1, trialApocalypseTuning.scoreSecondsPerPoint);
+    return Math.floor((this.trialZombieManager?.getApocalypseElapsedMs() ?? 0) / (secondsPerPoint * 1000));
   }
 
   private renderStageBackground(): void {

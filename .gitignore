@@ -4,6 +4,7 @@ node_modules/
 experiments/**/node_modules/
 dist/
 experiments/**/dist/
+artifacts/
 wwwroot/app/
 wwwroot/game/
 wwwroot/lab/

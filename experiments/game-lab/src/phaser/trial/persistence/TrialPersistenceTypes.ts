@@ -32,10 +32,10 @@ export interface TrialAuthResult {
 
 export interface TrialPersistencePort {
   getUsername(): string;
-  register(username: string, pin: string): TrialAuthResult;
-  signIn(username: string, pin: string): TrialAuthResult;
-  loadCheckpoint(username: string): TrialCheckpointData | null;
-  saveCheckpoint(checkpoint: TrialCheckpointData): void;
-  addScore(entry: TrialScoreEntry): void;
-  getScores(mode: TrialScoreEntry["mode"], limit: number): readonly TrialScoreEntry[];
+  register(username: string, pin: string): Promise<TrialAuthResult>;
+  signIn(username: string, pin: string): Promise<TrialAuthResult>;
+  loadCheckpoint(username: string): Promise<TrialCheckpointData | null>;
+  saveCheckpoint(checkpoint: TrialCheckpointData): Promise<void>;
+  addScore(entry: TrialScoreEntry): Promise<void>;
+  getScores(mode: TrialScoreEntry["mode"], limit: number): Promise<readonly TrialScoreEntry[]>;
 }

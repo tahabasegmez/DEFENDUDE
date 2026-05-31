@@ -10,7 +10,7 @@ export class TrialLocalStoragePersistence implements TrialPersistencePort {
     return this.normalizeUsername(localStorage.getItem(usernameKey) ?? "guest");
   }
 
-  register(username: string, pin: string): TrialAuthResult {
+  async register(username: string, pin: string): Promise<TrialAuthResult> {
     const normalized = this.normalizeUsername(username);
     if (!this.isValidPin(pin)) {
       return { success: false, message: "PIN must be 6 digits." };
@@ -27,7 +27,7 @@ export class TrialLocalStoragePersistence implements TrialPersistencePort {
     return { success: true, message: `Registered as ${normalized}.` };
   }
 
-  signIn(username: string, pin: string): TrialAuthResult {
+  async signIn(username: string, pin: string): Promise<TrialAuthResult> {
     const normalized = this.normalizeUsername(username);
     const users = this.getUsers();
     if (!users[normalized] || users[normalized] !== pin) {
@@ -38,7 +38,7 @@ export class TrialLocalStoragePersistence implements TrialPersistencePort {
     return { success: true, message: `Signed in as ${normalized}.` };
   }
 
-  loadCheckpoint(username: string): TrialCheckpointData | null {
+  async loadCheckpoint(username: string): Promise<TrialCheckpointData | null> {
     const raw = localStorage.getItem(this.getCheckpointKey(username));
     if (!raw) {
       return null;
@@ -52,19 +52,21 @@ export class TrialLocalStoragePersistence implements TrialPersistencePort {
     }
   }
 
-  saveCheckpoint(checkpoint: TrialCheckpointData): void {
+  async saveCheckpoint(checkpoint: TrialCheckpointData): Promise<void> {
     localStorage.setItem(this.getCheckpointKey(checkpoint.username), JSON.stringify(checkpoint));
   }
 
-  addScore(entry: TrialScoreEntry): void {
-    const scores = [...this.getAllScores(), entry]
+  async addScore(entry: TrialScoreEntry): Promise<void> {
+    const scores = this.mergeBestScores([...this.getAllScores(), entry])
       .sort((left, right) => right.score - left.score)
       .slice(0, 300);
     localStorage.setItem(scoreboardKey, JSON.stringify(scores));
   }
 
-  getScores(mode: TrialScoreEntry["mode"], limit: number): readonly TrialScoreEntry[] {
-    return this.getAllScores()
+  async getScores(mode: TrialScoreEntry["mode"], limit: number): Promise<readonly TrialScoreEntry[]> {
+    const scores = this.mergeBestScores(this.getAllScores());
+    localStorage.setItem(scoreboardKey, JSON.stringify(scores));
+    return scores
       .filter((score) => score.mode === mode)
       .sort((left, right) => right.score - left.score)
       .slice(0, limit);
@@ -113,5 +115,21 @@ export class TrialLocalStoragePersistence implements TrialPersistencePort {
 
   private saveUsers(users: Record<string, string>): void {
     localStorage.setItem(usersKey, JSON.stringify(users));
+  }
+
+  private mergeBestScores(scores: readonly TrialScoreEntry[]): TrialScoreEntry[] {
+    const bestByPlayerAndMode = new Map<string, TrialScoreEntry>();
+    for (const score of scores) {
+      const key = `${this.normalizeUsername(score.username)}:${score.mode}`;
+      const current = bestByPlayerAndMode.get(key);
+      if (!current || score.score > current.score || (score.score === current.score && score.createdAtIso < current.createdAtIso)) {
+        bestByPlayerAndMode.set(key, {
+          ...score,
+          username: this.normalizeUsername(score.username)
+        });
+      }
+    }
+
+    return [...bestByPlayerAndMode.values()];
   }
 }
